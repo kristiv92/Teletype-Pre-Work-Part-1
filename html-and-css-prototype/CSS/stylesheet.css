@@ -18,10 +18,155 @@ h1 {
 	font-weight: bold;
 }
 
-.container {
+
+.grid{
+	display:grid;
 	margin: 2em auto;
-	max-width: 630px;
+	max-width: 250px;
 	text-align: center;
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	justify-content: center;
+	position: relative;
+	margin: auto;
+	grid-template-areas: "header header"
+	                      "bar bar"
+	                      "info info"
+	                      "left right";
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto;
+}
+
+header {
+  grid-area: header;
+}
+.bar{
+	grid-area: bar;
+	margin-top: -8px;
+}
+
+
+
+.left{
+	grid-area: left;
+	margin-right: 10px;
+}
+.right{
+	grid-area: right;
+	margin-left: 10px;
+}
+
+.box{
+  width: 260px;
+  margin: 20px auto;
+  border-radius: 3px;
+  background: #4b4b4b;
+  color: #fff;
+  padding: 13px;
+  text-align: center;
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+	position: relative;
+	font-size: 14px;
+}
+
+.comment:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+	margin-top: 50px;
+  position: absolute;
+	border-left: 10px solid transparent;
+ 	border-right: 10px solid transparent;
+ 	border-top: 15px solid #4b4b4b;
+ 	border-bottom: 10px solid;
+  right:30px;
+  bottom: -18px;
+}
+
+
+.progress {
+	position: relative;
+	height: 15px;
+	width: 260px;
+	position:relative;
+	background:#fafafa;
+	border: 1px solid #e4e4e4;
+}
+
+.progress > span {
+	display: block;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	background-color: #EF5F3C;
+	border-left: 1px solid #e4e4e4;
+	border-top: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+}
+.info {
+	text-align: left;
+	color: #999;
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+	font-size: 13px;
+	box-shadow: 0 3px 2px -2px #DCDCDC;
+  width: 260px;
+	border: 1px solid #eaeaea;
+	grid-area: info;
+	position: relative;
+	padding: 20px;
+}
+.amount {
+	text-align: left;
+	color: #424242;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+  width: 100px;
+	height: 45px;
+	border-top: 3px outset #eaeaea;
+	border-left: 2px solid #eaeaea;
+	border-bottom: 2px solid #eaeaea;
+	border-right: 2px solid #eaeaea;
+	border-radius: 5px;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.submit {
+	text-align: center;
+	color: #ffffff;
+	background-color: #03b51a;
+	font-size: 14px;
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+  width: 100px;
+	height: 45px;
+	border: 2px solid #11b424;
+	border-radius: 5px;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.button{
+	text-align: center;
+	color: #828282;
+	background-color: #fafafa;
+	font-weight: bold;
+	font-size: 12px;
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+  width: 125px;
+	border-radius: 2px;
+	border: 2px solid #e9e9e9;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	box-shadow: 0 2px 2px -2px #DCDCDC;
+
 }
 
 /* The following font information and color codes are provided for you.  They do not match the prototype exactly, but they are fine to use for the assignment and doing so does not count against you.  They are simply meant to help you save time.  We would like everyone to have as close to a pixel-perfect match to the prototype as possible.  If you do find a font/color that matches more precisely, please share it with the team so we can improve the activity for future applicants.  Thank you!  Happy coding!
